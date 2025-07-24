@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tom the Cartoon</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f0f8ff;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    img {
+      width: 300px;
+      cursor: pointer;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    #description {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Meet Tom the Cat!</h1>
+
+  <!-- Cartoon Photo -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Tom_and_Jerry.svg/512px-Tom_and_Jerry.svg.png"
+       alt="Tom and Jerry"
+       onclick="showCartoonAlert()" />
+
+  <!-- Cartoon Introduction -->
+  <p id="description">
+    Tom is the iconic blue-grey cat from the legendary cartoon series <em>Tom and Jerry</em>.<br>
+    He’s always trying to catch Jerry, the clever little mouse.<br>
+    Tom's plans often backfire, making him the unlucky hero of the show.<br>
+    His silly reactions and expressions have made generations laugh!
+  </p>
+
+  <script>
+    function showCartoonAlert() {
+      alert("I am Tom the Cat!");
+    }
+  </script>
+
+</body>
+</html>
+
+
