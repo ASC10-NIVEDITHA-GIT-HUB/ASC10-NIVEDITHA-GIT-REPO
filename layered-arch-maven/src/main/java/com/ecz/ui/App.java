@@ -8,6 +8,6 @@ public class App
         MenuUI menuUI = new MenuUI();
         menuUI.getAllProducts();
 //        menuUI.updateProduct();
-//        menuUI.getAllProducts();
+      // menuUI.getAllProducts();
     }
 }
