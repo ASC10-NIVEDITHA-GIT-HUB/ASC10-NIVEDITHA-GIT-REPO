@@ -9,8 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.ecz.repository.DbConnectionSingleton.connection;
-import static com.ecz.repository.DbConnectionSingleton.getConnection;
+//import static com.ecz.repository.DbConnectionSingleton.connection;
+//import static com.ecz.repository.DbConnectionSingleton.getConnection;
 
 
 public class ProductRepositoryDbImpl implements ProductRepository{
@@ -48,7 +48,10 @@ public class ProductRepositoryDbImpl implements ProductRepository{
                 double price = resultSet.getDouble("price");
                 int quantity = resultSet.getInt("quantity");
             }
+        }catch(Exception e){
+            throw new RuntimeException(e);
         }
+        return products;
     }
 
 }
