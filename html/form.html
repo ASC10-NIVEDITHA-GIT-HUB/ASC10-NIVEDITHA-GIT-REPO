@@ -89,11 +89,21 @@
         input[type="reset"]:hover {
             background-color: #c0392b;
         }
+
+        #output {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fdfefe;
+            border: 2px dashed #2c3e50;
+            border-radius: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
     <h1>Our Registration Form</h1>
-    <form>
+    <form onsubmit="displayData(event)">
         <div class="form-group">
             <label for="user-name">Name:</label>
             <input type="text" id="user-name" name="user-name" required>
@@ -153,5 +163,37 @@
             <input type="reset" value="Reset">
         </div>
     </form>
+
+    <div id="output"></div>
+
+    <script>
+        function displayData(event) {
+            event.preventDefault(); // prevent form from refreshing the page
+
+            const name = document.getElementById("user-name").value;
+            const password = document.getElementById("user-password").value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const food = document.querySelector('input[name="food"]:checked').value;
+            const nationality = document.getElementById("Nationality").value;
+            const email = document.getElementById("user-email").value;
+            const phone = document.getElementById("user-phone").value;
+            const dob = document.getElementById("user-dob").value;
+            const address = document.getElementById("user-address").value;
+
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+                <h2 style="text-align:center;">Entered Details</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Password:</strong> ${'*'.repeat(password.length)}</p>
+                <p><strong>Gender:</strong> ${gender}</p>
+                <p><strong>Food Preference:</strong> ${food}</p>
+                <p><strong>Nationality:</strong> ${nationality}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Date of Birth:</strong> ${dob}</p>
+                <p><strong>Address:</strong> ${address}</p>
+            `;
+        }
+    </script>
 </body>
 </html>
