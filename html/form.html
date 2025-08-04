@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 40px;
+        }
+
+        form {
+            width: 60%;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            color: #2c3e50;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 60%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        input[type="radio"] {
+            margin-left: 10px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Registration Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="user-name">Name:</label>
+            <input type="text" id="user-name" name="user-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="user-password">Password:</label>
+            <input type="password" id="user-password" name="user-password" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+        </div>
+
+        <div class="form-group">
+            <label>Food Preference:</label>
+            <input type="radio" name="food" value="veg" checked> Veg
+            <input type="radio" name="food" value="non-veg"> Non-Veg
+        </div>
+
+        <div class="form-group">
+            <label for="Nationality">Nationality:</label>
+            <select id="Nationality" name="Nationality" required>
+                <option value="">--Select--</option>
+                <option value="indian">Indian</option>
+                <option value="american">American</option>
+                <option value="british">British</option>
+                <option value="canadian">Canadian</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="user-email">Email:</label>
+            <input type="email" id="user-email" name="user-email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="user-phone">Phone:</label>
+            <input type="tel" id="user-phone" name="user-phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="user-dob">Date of Birth:</label>
+            <input type="date" id="user-dob" name="user-dob" required>
+        </div>
+
+        <div class="form-group">
+            <label for="user-address">Address:</label>
+            <textarea id="user-address" name="user-address" rows="3" cols="30" required></textarea>
+        </div>
+
+        <div class="button-group">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
