@@ -71,7 +71,6 @@ public class FriendDAO {
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-
             stmt.setInt(1, id);
             stmt.executeUpdate();
             System.out.println("Friend deleted!");
